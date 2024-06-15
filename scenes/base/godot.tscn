@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs63pm1j4yicc"]
+
+[ext_resource type="Texture2D" uid="uid://chat3aunrpvoe" path="res://assets/godot.png" id="1_yj70l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0hgen"]
+font_size = 48
+
+[node name="Godot" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_yj70l")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = -44.0
+offset_right = 246.0
+offset_bottom = 44.0
+text = "GODOT"
+label_settings = SubResource("LabelSettings_0hgen")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2oil2hfc2xxd"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_cm5im"]
+[ext_resource type="PackedScene" uid="uid://cm6if7vq1xo8c" path="res://scenes/home.tscn" id="2_k5c4d"]
+[ext_resource type="PackedScene" uid="uid://duoi8rnxo4wo1" path="res://scenes/base/logo.tscn" id="3_y5m86"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cm5im")
+
+[node name="App" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Home" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Home" parent="Home" instance=ExtResource("2_k5c4d")]
+
+[node name="Logo" parent="." instance=ExtResource("3_y5m86")]
+
+[connection signal="call_app" from="Home/Home" to="." method="_on_home_call_app"]
+[connection signal="call_setting" from="Home/Home" to="." method="_on_home_call_setting"]

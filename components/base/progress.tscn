@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://vme1fal12mto"]
+
+[ext_resource type="Script" path="res://components/base/progress.gd" id="1_s65c1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ppfmi"]
+font_size = 20
+
+[node name="Progress" type="Label"]
+layout_direction = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1675.0
+offset_bottom = -1040.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s65c1")
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 205.0
+offset_right = 245.0
+offset_bottom = 40.0
+text = "0%"
+label_settings = SubResource("LabelSettings_ppfmi")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

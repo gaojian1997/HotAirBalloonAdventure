@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1uk246awfxg"]
+
+[ext_resource type="Texture2D" uid="uid://devexbq3ufkj5" path="res://icon.svg" id="1_6yoi8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oijb7"]
+font_size = 64
+
+[node name="MoonpieStudio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2.08165e-12, -128)
+texture = ExtResource("1_6yoi8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -256.0
+offset_top = -50.0
+offset_right = 256.0
+offset_bottom = 50.0
+text = "Moonpie Studio"
+label_settings = SubResource("LabelSettings_oijb7")
+horizontal_alignment = 1
+vertical_alignment = 1

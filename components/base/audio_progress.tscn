@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://xfqckv683xag"]
+
+[ext_resource type="Script" path="res://components/base/audio_progress.gd" id="1_w7s2s"]
+[ext_resource type="PackedScene" uid="uid://vme1fal12mto" path="res://components/base/progress.tscn" id="2_um070"]
+
+[node name="AudioProgress" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1675.0
+offset_bottom = -1040.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w7s2s")
+
+[node name="Progress" parent="." instance=ExtResource("2_um070")]
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[connection signal="progress_changed" from="Progress" to="." method="_on_progress_changed"]

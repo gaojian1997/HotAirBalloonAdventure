@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0cj3c11x3dgo"]
+
+[ext_resource type="Script" path="res://scenes/base/setting.gd" id="1_jgrm3"]
+[ext_resource type="PackedScene" uid="uid://xfqckv683xag" path="res://components/base/audio_progress.tscn" id="1_su51d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e7eck"]
+font_size = 60
+
+[node name="Setting" type="Node2D"]
+script = ExtResource("1_jgrm3")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 360.0
+offset_bottom = 180.0
+text = "Setting"
+label_settings = SubResource("LabelSettings_e7eck")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterAudioProgress" parent="." instance=ExtResource("1_su51d")]
+offset_left = 179.0
+offset_top = 403.0
+offset_right = 424.0
+offset_bottom = 443.0
+audio_bus_name = "Master"
+
+[node name="MusicAudioProgress2" parent="." instance=ExtResource("1_su51d")]
+offset_left = 182.0
+offset_top = 491.0
+offset_right = 427.0
+offset_bottom = 531.0
+audio_bus_name = "Music"
+
+[node name="SoundAudioProgress" parent="." instance=ExtResource("1_su51d")]
+offset_left = 175.0
+offset_top = 583.0
+offset_right = 420.0
+offset_bottom = 623.0
+audio_bus_name = "Sound"
